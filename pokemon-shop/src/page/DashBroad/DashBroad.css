@@ -1,19 +1,13 @@
-.header{
+.header {
     width: 100%;
     height: 110px;
     position: relative;
+    background: linear-gradient(180deg, red 50%, white 50%);
 }
 .background-header{
     display: flex;
 }
-.red{ 
-    height: 50%;
-    background-color: red;
-}
-.white{
-    height: 50%;
-    background-color: white;
-}
+
 .nameShop{
     position: absolute;
         left: 30.42%;
@@ -44,7 +38,6 @@
 .search__bar{
     width: 100%;
     height: 100px;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +67,13 @@
     width: 100%;
     height: 400px;
     position: relative;
+    background: linear-gradient(180deg, red 50%, white 50%);
+}
+.slider .red{
+    height: 47.5%;
+}
+.slider .white{
+    height: 47.5%;
 }
 .line_black{
     width: 100%;
@@ -90,4 +90,17 @@
     height: 392px;
     bottom: 1px;
     left: 300px;
+}
+input{
+    border: none;
+}
+
+.card__item {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
 }

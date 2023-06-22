@@ -1,0 +1,91 @@
+.header {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    background: linear-gradient(180deg, red 50%, white 50%);
+}
+
+.background-header {
+    display: flex;
+}
+
+
+.nameShop {
+    position: absolute;
+    left: 30.42%;
+    right: 29.72%;
+    top: 27.27%;
+    bottom: 22.73%;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    color: #ffffff;
+
+    mix-blend-mode: normal;
+    text-shadow: 2px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cart_icon {
+    position: absolute;
+    left: 90.42%;
+    right: 6.46%;
+    top: 31.82%;
+    bottom: 27.27%;
+    ;
+    width: 45px;
+    height: 45px;
+}
+.body{
+    width: 95%;
+    margin: 0 auto;
+
+}
+.cart_body{
+    width: 100%;
+    height: 150px;
+    border: 1px solid red;
+    border-radius: 12px;
+    margin-top: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart_body_header{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    
+}
+.continues_shopping{
+    width: 50%;
+    display: flex;
+}
+.have_item{
+    width: 50%;
+}
+svg{
+    margin-top:15px ;
+    margin-left: 10px;
+}
+.continues_shopping a{
+    margin-top: 15px;
+    margin-left:10px ;
+}
+.have_item{
+    text-align: center;
+    margin: auto 0;
+    font-size: large;
+    font-weight: 600;
+}
+.cart_item_added{
+    width: 90%;
+    height: 100px;
+    margin-top:10px ;
+    border: 1px solid rebeccapurple;
+}

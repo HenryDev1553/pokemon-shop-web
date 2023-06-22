@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./DashBroad.css";
 import CartIcon from "../../assets/image/cart-icon.png";
 import Magnifyingglass from "../../assets/image/magnifying-glass.png";
 import pokemonbackground from "../../assets/image/pokemon background.png";
-
+import CardItem from "./CardItem";
+import axios from "axios";
 // import { CartIcon }
-function DashBroad() {
+
+function DashBroad(props) {
+  const [pokemonList, setPokemonList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/`)
+      .then((res) => {
+        setPokemonList(res.data.results);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
       <div className="header ">
@@ -37,6 +52,11 @@ function DashBroad() {
         </div>
       </div>
       {/* card item */}
+      <div className="card__item">
+        {pokemonList.map((item) => (
+          <CardItem key={item.name} name={item.name} url={item.url} />
+        ))}
+      </div>
     </>
   );
 }
