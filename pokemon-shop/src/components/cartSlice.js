@@ -26,6 +26,7 @@ const cartSlice = createSlice({
                     temp_arr[index].sl++
                     console.log('temp_arr[index].sl',temp_arr[index].sl)
                     state.card_array = [...temp_arr]
+                    state.quantity++
                 }
             }
           

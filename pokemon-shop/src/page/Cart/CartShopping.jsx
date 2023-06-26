@@ -1,9 +1,7 @@
 import React from "react";
 import "./CartStyle.css";
 import CartIcon from "../../assets/image/cart-icon.png";
-import bulbasaur from "../../assets/image/bulbasaur.png";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import cartSlice from "../../components/cartSlice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
