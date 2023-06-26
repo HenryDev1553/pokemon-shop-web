@@ -5,6 +5,7 @@ import Magnifyingglass from "../../assets/image/magnifying-glass.png";
 import pokemonbackground from "../../assets/image/pokemon background.png";
 import CardItem from "./CardItem";
 import axios from "axios";
+import { Link } from "react-router-dom";
 // import { CartIcon }
 
 function DashBroad(props) {
@@ -27,7 +28,11 @@ function DashBroad(props) {
         <div className="red"></div>
         <div className="white"></div>
         <p className="nameShop">POKÉMON SHOP</p>
-        <img src={CartIcon} alt="cart-icon" className="cart_icon" />
+        <button>
+          <Link to="cart">
+            <img src={CartIcon} alt="cart-icon" className="cart_icon" />
+          </Link>
+        </button>
       </div>
       <div className="search__bar">
         <div className="content_bar">

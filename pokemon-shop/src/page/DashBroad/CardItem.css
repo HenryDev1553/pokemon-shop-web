@@ -108,7 +108,7 @@
 .card_item_btn_add img{
     width: 100%;
 }
-button{
+.circle_btn{
     width: 30px;
     height: 29px;
     flex-shrink: 0;
@@ -119,7 +119,7 @@ button{
         transition: 1s ease-in-out;
         border-radius: 50px;
 }
-button:hover{
+.circle_btn:hover{
     transition: 1s ease-in-out;
         background: #ffffff;
 }

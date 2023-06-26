@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import card_add from "../../assets/image/cart-add.png";
 import "./CardItem.css";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../components/cartSlice";
 function CardItem(props) {
   const [pokemon, setPokemon] = useState([]);
   useEffect(() => {
@@ -9,6 +11,14 @@ function CardItem(props) {
       setPokemon(res.data);
     });
   }, []);
+
+  const dispatch = useDispatch();
+
+  const addDetail = (name) => {
+    console.log(name);
+    dispatch(addItem(name));
+  };
+
   return (
     <>
       <div className="card_item_container">
@@ -61,7 +71,16 @@ function CardItem(props) {
           </div>
         </div>
         <div className="card_item_btn_add">
-          <button className="circle_btn">
+          <button
+            onClick={() =>
+              addDetail({
+                img: pokemon?.sprites?.other["official-artwork"].front_default,
+                name: pokemon.name,
+                sl: 1,
+              })
+            }
+            className="circle_btn"
+          >
             <img src={card_add} alt="" />
           </button>
         </div>
