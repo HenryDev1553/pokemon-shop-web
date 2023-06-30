@@ -15,7 +15,6 @@ function CardItem(props) {
   const dispatch = useDispatch();
 
   const addDetail = (name) => {
-    console.log(name);
     dispatch(addItem(name));
   };
 
@@ -77,6 +76,7 @@ function CardItem(props) {
                 img: pokemon?.sprites?.other["official-artwork"].front_default,
                 name: pokemon.name,
                 sl: 1,
+                id: pokemon.id,
               })
             }
             className="circle_btn"

@@ -120,3 +120,19 @@ svg{
     border-radius: 10px;
     cursor: pointer;
 }
+.quantity{
+    display: inline;
+    border-radius: 10px;
+    font-size: medium;
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    color: yellow
+}
+.btn_view{
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(118, 182, 235);
+    border-radius: 12px;
+    cursor: pointer;
+}

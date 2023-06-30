@@ -104,3 +104,12 @@ input{
     justify-content: space-around;
     
 }
+.quantity{
+    display: inline;
+    border-radius: 10px;
+    font-size: medium;
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    color: yellow
+}

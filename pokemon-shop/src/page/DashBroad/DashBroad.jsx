@@ -6,10 +6,13 @@ import pokemonbackground from "../../assets/image/pokemon background.png";
 import CardItem from "./CardItem";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 // import { CartIcon }
 
 function DashBroad(props) {
   const [pokemonList, setPokemonList] = useState([]);
+  const { cartSlice } = useSelector((state) => state);
 
   useEffect(() => {
     axios
@@ -25,14 +28,13 @@ function DashBroad(props) {
   return (
     <>
       <div className="header ">
-        <div className="red"></div>
-        <div className="white"></div>
         <p className="nameShop">POKÉMON SHOP</p>
-        <button>
+        <div className="cart">
           <Link to="cart">
             <img src={CartIcon} alt="cart-icon" className="cart_icon" />
           </Link>
-        </button>
+          <div className="quantity">{cartSlice.quantity}</div>
+        </div>
       </div>
       <div className="search__bar">
         <div className="content_bar">
