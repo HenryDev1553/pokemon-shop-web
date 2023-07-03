@@ -77,6 +77,12 @@ function CardItem(props) {
                 name: pokemon.name,
                 sl: 1,
                 id: pokemon.id,
+                hp: pokemon?.stats?.[0].base_stat,
+                atk: pokemon?.stats?.[1]?.base_stat,
+                def: pokemon?.stats?.[2]?.base_stat,
+                type: pokemon?.types?.[0].type?.name,
+                height: pokemon?.height,
+                weight: pokemon?.weight,
               })
             }
             className="circle_btn"

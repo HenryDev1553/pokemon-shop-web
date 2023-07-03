@@ -43,6 +43,7 @@ function DashBroad(props) {
               type="text"
               placeholder="Search Pokémon"
               className="input_text"
+              onChange={(e) => setPokemonName(e.target.value)}
             />
             <div className="magnifyingglass">
               <img src={Magnifyingglass} alt="" />

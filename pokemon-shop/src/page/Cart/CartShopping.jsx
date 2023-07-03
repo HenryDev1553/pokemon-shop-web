@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./CartStyle.css";
 import CartIcon from "../../assets/image/cart-icon.png";
-import bulbasaur from "../../assets/image/bulbasaur.png";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeItem } from "../../components/cartSlice";
 import ViewDetail from "./ViewDetail";
+import bulbasaur from "../../assets/image/bulbasaur.png";
 
 function CartShopping() {
   const { cartSlice } = useSelector((state) => state);
@@ -34,7 +34,43 @@ function CartShopping() {
         <button onClick={() => setTogglePop(true)} className="btn_view">
           View
         </button>
-        <ViewDetail trigger={togglePop} setTrigger={setTogglePop}></ViewDetail>
+        <ViewDetail trigger={togglePop} setTrigger={setTogglePop}>
+          <div className="img_view">
+            <img src={item.img} alt="" />
+          </div>
+          <div className="info_view">
+            <div className="name_info">
+              <strong>{item.name}</strong>
+            </div>
+            <div className="properties_view">
+              <div className="info_detail">
+                <div className="left_info">
+                  <p>Type</p>
+                  <p>Height</p>
+                  <p>Weight</p>
+                </div>
+                <div className="right_info">
+                  <p>{item.type}</p>
+                  <p>{item.height}0cm</p>
+                  <p>{item.weight}Lbs</p>
+                </div>
+              </div>
+              <div className="exp_detail">
+                <div className="left_exp">
+                  <p>HP</p>
+                  <p>Attack</p>
+                  <p>Defence</p>
+                </div>
+                <div className="right_exp">
+                  <p>{item.hp}</p>
+                  <p>{item.atk}</p>
+                  <p>{item.def}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ViewDetail>
+
         <div className="btn_remove">
           <button onClick={() => removeCard({ id: item.id })}>REMOVE</button>
         </div>
